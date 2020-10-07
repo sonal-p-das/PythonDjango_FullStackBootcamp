@@ -1,0 +1,33 @@
+h1{
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  text-transform: uppercase;
+}
+table{
+  margin: auto;
+}
+
+table td{
+  border: 0.3em solid white;
+  height: 25em;
+  width: 15em;
+}
+#cellOne{
+  background: #264653;
+}
+
+#cellTwo{
+  background: #2a9d8f;
+}
+
+#cellThree{
+  background: #e9c46a;
+}
+
+#cellFour{
+  background: #f4a261;
+}
+
+#cellFive{
+  background: #e76f51;
+}
