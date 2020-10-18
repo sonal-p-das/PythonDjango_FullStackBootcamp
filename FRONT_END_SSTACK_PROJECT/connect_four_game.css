@@ -1,0 +1,19 @@
+.container{
+  align-items: center;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  border-collapse: separate;
+}
+
+td{
+  display:inline-block;
+  border-radius: 10em;
+  background-color: grey;
+  border: 2px solid black;
+  height: 4.5em;
+  width: 4.5em;
+  margin: 0.1em;
+}
