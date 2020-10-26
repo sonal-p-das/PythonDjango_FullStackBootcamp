@@ -36,3 +36,102 @@ result3 = arrayCheck([1, 1, 2, 1, 2, 3])
 print(result1)
 print(result2)
 print(result3)
+
+#####################
+## -- PROBLEM 2 -- ##
+#####################
+
+# Given a string, return a new string made of every other character starting
+# with the first, so "Hello" yields "Hlo".
+
+# For example:
+
+# stringBits('Hello') → 'Hlo'
+# stringBits('Hi') → 'H'
+# stringBits('Heeololeo') → 'Hello'
+
+def stringBits(str):
+  # CODE GOES HERE
+
+  out = str[:len(str):2]
+  return out
+
+print(stringBits('Hello'))
+print(stringBits('Hi'))
+print(stringBits('Heeololeo'))
+
+#####################
+## -- PROBLEM 3 -- ##
+#####################
+
+# Given two strings, return True if either of the strings appears at the very end
+# of the other string, ignoring upper/lower case differences (in other words, the
+# computation should not be "case sensitive").
+#
+# Note: s.lower() returns the lowercase version of a string.
+#
+# Examples:
+#
+# end_other('Hiabc', 'abc') → True
+# end_other('AbC', 'HiaBc') → True
+# end_other('abc', 'abXabc') → True
+
+
+def end_other(a, b):
+  # CODE GOES HERE
+  if len(a) > len(b) and a[len(a)-len(b):len(a)].lower() == b.lower():
+      return True
+  elif len(b) > len(a) and b[len(b)-len(a):len(b)].lower() == a.lower():
+      return True
+  else:
+      return False
+
+print(end_other('Hiabc', 'abc'))
+print(end_other('AbC', 'HiaBc'))
+print(end_other('abc', 'abXabc'))
+
+#####################
+## -- PROBLEM 4 -- ##
+#####################
+
+# Given a string, return a string where for every char in the original,
+# there are two chars.
+
+# doubleChar('The') → 'TThhee'
+# doubleChar('AAbb') → 'AAAAbbbb'
+# doubleChar('Hi-There') → 'HHii--TThheerree'
+
+def doubleChar(str):
+  # CODE GOES HERE
+  result = ""
+  return result.join([str[char]+str[char] for char in range(0, len(str))])
+
+print(doubleChar('The'))
+print(doubleChar('AAbb'))
+print(doubleChar('Hi-There'))
+
+#####################
+## -- PROBLEM 5 -- ##
+#####################
+
+# Read this problem statement carefully!
+
+# Given 3 int values, a b c, return their sum. However, if any of the values is a
+# teen -- in the range 13-19 inclusive -- then that value counts as 0, except 15
+# and 16 do not count as a teens. Write a separate helper "def fix_teen(n):"that
+# takes in an int value and returns that value fixed for the teen rule.
+#
+# In this way, you avoid repeating the teen code 3 times (i.e. "decomposition").
+# Define the helper below and at the same indent level as the main no_teen_sum().
+# Again, you will have two functions for this problem!
+#
+# Examples:
+#
+# no_teen_sum(1, 2, 3) → 6
+# no_teen_sum(2, 13, 1) → 3
+# no_teen_sum(2, 1, 14) → 3
+
+def no_teen_sum(a, b, c):
+  # CODE GOES HERE
+def fix_teen(n):
+  # CODE GOES HERE
