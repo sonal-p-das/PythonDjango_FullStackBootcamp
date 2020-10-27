@@ -21,6 +21,6 @@ from django.conf.urls import include
 
 urlpatterns = [
     url(r'^$',views.index,name='index'), # calling view function 'index' from views imported here from first_app
-    url(r'^first_app/',include('first_app.urls')),
+    url(r'^first_app/',include('first_app.urls')), #include allows to add url extensions, urls for views can be manager through the apps instead of all being in the project
     path('admin/', admin.site.urls),
 ]

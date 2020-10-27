@@ -4,3 +4,7 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("<em>My Second App</em>")
+
+def help(request):
+    dict = {"pageName":"Home page"}
+    return render(request, 'AppTwo/help.html',context=dict)
