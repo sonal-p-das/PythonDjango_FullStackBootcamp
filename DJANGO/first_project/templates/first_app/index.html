@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>First App</title>
+    <title>Django App to celebrate graduation</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}"/>
   </head>
   <body>
-    <h1>Hello this is index.html</h1>
-    {{insert_me}} // this is a template tag, insert_me is a var
+    <h1>Hi, this is a picture of CMU Graduation background!</h1>
+    <img src="{% static "images/cmugrad-zoom-backgrounds-tartan.jpg"  %}" alt="Uh Oh, didn't show!">
+    <!--{{insert_me}}-->
   </body>
 </html>
